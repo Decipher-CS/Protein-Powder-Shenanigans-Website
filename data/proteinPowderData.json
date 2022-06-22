@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "Bigmuscles Nutrition Premium Gold Whey 1Kg Whey Protein Isolate Blend | USA FDA REGD. BRAND | 25g Protein Per Serving [Belgian Chocolate]",
+        "serving": 35,
+        "price": 1699,
+        "proteinPerScoop": 25
+    },
+    {
+        "id": 2,
+        "name": "Bigmuscles Nutrition Premium Gold Whey 1Kg Whey Protein Isolate Blend | USA FDA REGD. BRAND | 25g Protein Per Serving [Belgian Chocolate]",
+        "serving": 30,
+        "price": 1299,
+        "proteinPerScoop": 12
+    },
+    {
+        "id": 3,
+        "name": "Sample Stuff",
+        "serving": 30,
+        "price": 1299,
+        "proteinPerScoop": 12
+    }
+]
