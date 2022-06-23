@@ -12,12 +12,5 @@
         "serving": 30,
         "price": 1299,
         "proteinPerScoop": 12
-    },
-    {
-        "id": 3,
-        "name": "Sample Stuff",
-        "serving": 30,
-        "price": 1299,
-        "proteinPerScoop": 12
     }
 ]

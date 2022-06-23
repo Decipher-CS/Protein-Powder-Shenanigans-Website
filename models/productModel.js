@@ -31,8 +31,27 @@ let addNewProduct = (product) => {
     });
 };
 
-let updateProduct = (id) =>{
+
+let deleteProduct = (id) =>{
     return new Promise((resolve, reject) => {
+        product = proteinData.find((item) => item.id == id);
+        productIndex = proteinData.indexOf(product);
+        proteinData.pop(productIndex);
+        writeDataToFile('./data/proteinPowderData.json', proteinData);
+
+        resolve(1)
+    });
+}
+
+let updateProduct = (id, body) =>{
+    return new Promise((resolve, reject) => {
+        product = proteinData.find((item) => item.id == id);
+        productIndex = proteinData.indexOf(product);
+        proteinData.pop(productIndex);
+        proteinData.push(body)
+        console.log(proteinData)
+        writeDataToFile('./data/proteinPowderData.json', proteinData);
+
         resolve(1)
     });
 }
@@ -41,5 +60,6 @@ module.exports = {
     findAll,
     findById,
     addNewProduct,
-    updateProduct
+    updateProduct,
+    deleteProduct
 };

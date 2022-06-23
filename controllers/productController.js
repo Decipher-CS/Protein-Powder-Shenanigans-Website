@@ -42,10 +42,27 @@ async function addNewProduct(req, res) {
     }
 }
 
-async function updateProduct(req, res) {
+async function deleteProduct(req, res, id) {
     try{
-        id = 3
-        const status = await Product.updateProduct(id);
+        const status = await Product.deleteProduct(id);
+        res.end('Done')
+    } catch(err) {
+        console.log(err)
+    }
+}
+
+async function updateProduct(req, res, id) {
+    try{
+        body = ''
+        req.on('data', chunk =>{
+            body += chunk.toString()
+        });
+
+        req.on('end', async _ =>{
+            
+            const status = await Product.updateProduct(id, JSON.parse(body));
+            res.end('Done')
+        })
     } catch(err) {
         console.log(err)
     }
@@ -60,5 +77,6 @@ module.exports = {
     getProduct,
     showHomePage,
     addNewProduct,
-    updateProduct
+    updateProduct,
+    deleteProduct
 }
