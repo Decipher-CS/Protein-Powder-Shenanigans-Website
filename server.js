@@ -12,7 +12,7 @@ app
 
 .get('/products/:id', (req, res)=> getProduct(req, res, req.params.id))
 
-.post('/products/:id', (req, res) => addNewProduct(req, res, req.params.id))
+// .post('/products/:id', (req, res) => addNewProduct(req, res, req.params.id))
 
 .post('/products', (req, res)=>  addNewProduct(req, res))
 
@@ -24,5 +24,7 @@ app
 
 
 
-app.listen(PORT, _ => console.log('Running on port ::', PORT));
+app.listen(PORT, _ => {
+    console.log('Running on port ::', PORT)
+});
 
