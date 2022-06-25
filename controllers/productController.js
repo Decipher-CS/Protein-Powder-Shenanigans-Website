@@ -73,9 +73,9 @@ function showHomePage(req, res) {
 }
 
 module.exports = {
+    showHomePage,
     getProducts,
     getProduct,
-    showHomePage,
     addNewProduct,
     updateProduct,
     deleteProduct
