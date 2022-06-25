@@ -4,6 +4,7 @@ const app = express()
 const PORT = process.env.PORT || 5500;
 const {getProducts, getProduct, showHomePage, addNewProduct, updateProduct, deleteProduct} = require('./controllers/productController')
 
+
 app
 .get ('/', (req, res) => showHomePage(req, res))
 

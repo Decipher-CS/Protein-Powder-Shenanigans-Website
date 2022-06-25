@@ -1,6 +1,25 @@
 let proteinData = require('../data/proteinPowderData.json');
 const { writeDataToFile } = require('../utils');
 
+const MongoClient = require('mongodb').MongoClient;
+const uri = 'mongodb+srv://privileged4010:2qXa0jKOZw8Z6vRM@gymconsumableproductdat.uowijxx.mongodb.net/?retryWrites=true&w=majority'
+
+async function connect(){
+    const client = new MongoClient(uri)
+    try{
+        let status = await client.connect()
+        const db = client.db('gymConsumableProductData')
+        console.log(db)
+
+    } catch(err){
+        console.log(err)
+
+    } finally{
+        await client.close()
+    }
+}
+connect()
+
 let findAll = () => {
     return new Promise((resolve, reject) => {
         resolve(proteinData);
