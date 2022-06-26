@@ -3,6 +3,8 @@ const uri = 'mongodb+srv://privileged4010:2qXa0jKOZw8Z6vRM@gymconsumableproductd
 const client = new MongoClient(uri)
 let db
 
+
+
 client.connect()
 .then(client => db = client.db('Products').collection('ProteinPowder'))
 .catch(err => console.log(err))

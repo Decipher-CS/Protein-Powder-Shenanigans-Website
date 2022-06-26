@@ -69,7 +69,6 @@ async function updateProduct(req, res, id) {
 }
 
 async function showHomePage(req, res) {
-    await Product.findAll()
     res.end('Home Page')
 }
 

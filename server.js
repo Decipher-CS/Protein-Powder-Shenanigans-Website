@@ -12,9 +12,9 @@ app
 
 .get('/products/:id', (req, res)=> getProduct(req, res, req.params.id))
 
-// .post('/products/:id', (req, res) => addNewProduct(req, res, req.params.id))
-
 .post('/products', (req, res)=>  addNewProduct(req, res))
+
+.post('/products/:id', (req, res) => addNewProduct(req, res, req.params.id))
 
 .put('products/:id', (req, res) =>  updateProduct(req,res, req.params.id))
 
